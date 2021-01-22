@@ -60,7 +60,7 @@ export class LoginPage implements OnInit {
               this.disabledButton = false;
               this.presentToast('Login Success');
               this.storage.set('storage_xxx', res.result); //création d'une session storage
-              this.router.navigateRoot(['/home']);
+              this.router.navigateByUrl('/home');
             }else{
               loader.dismiss();
               this.disabledButton = false;
@@ -69,7 +69,7 @@ export class LoginPage implements OnInit {
           }),(err)=>{
               loader.dismiss();
               this.disabledButton = false;
-              this.presentAlert('Timeout');
+              this.presentToast('Timeout');
             }
       });
     }

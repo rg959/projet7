@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage'; // Pour Data Storage
 import { HttpClientModule } from '@angular/common/http';
-import { AccessProviders } from './providers/access-providers';
+import { AccessProviders } from './providers/access.providers';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +19,7 @@ import { AccessProviders } from './providers/access-providers';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule, 
-    IonicStorageModule.forRoot() // Pour Data Storage
+    IonicStorageModule.forRoot(), // Pour Data Storage
     HttpClientModule
   ],
   providers: [
