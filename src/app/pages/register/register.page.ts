@@ -75,13 +75,13 @@ export class RegisterPage implements OnInit {
               loader.dismiss();
               this.disabledButton = false;
               this.presentToast(res.msg);
-            }.(err)=>{
+            }
+            }),(err)=>{
               loader.dismiss();
               this.disabledButton = false;
               this.presentAlert('Timeout');
             }
 
-        });
       });
     }
   }
@@ -91,7 +91,7 @@ export class RegisterPage implements OnInit {
     const toast = await this.toastCtrl.create({
       message: a,
       duration: 1500,
-      position: top
+      position: 'top'
     });
     toast.present();
   }

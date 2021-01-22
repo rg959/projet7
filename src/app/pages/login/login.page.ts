@@ -48,7 +48,7 @@ export class LoginPage implements OnInit {
       loader.present();
 
       return new Promise(resolve => {
-        Let body = {
+        let body = {
           aksi: 'proses_register',
           email_address: this.email_address,
           password: this.password
@@ -65,13 +65,12 @@ export class LoginPage implements OnInit {
               loader.dismiss();
               this.disabledButton = false;
               this.presentToast('Email or Password incorrect');
-            }.(err)=>{
+            }
+          }),(err)=>{
               loader.dismiss();
               this.disabledButton = false;
               this.presentAlert('Timeout');
             }
-
-        });
       });
     }
   }
@@ -81,7 +80,7 @@ export class LoginPage implements OnInit {
     const toast = await this.toastCtrl.create({
       message: a,
       duration: 1500,
-      position: top
+      position: 'top'
     });
     toast.present();
   }
